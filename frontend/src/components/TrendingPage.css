@@ -11,6 +11,21 @@
   margin-bottom: 2.5rem;
 }
 
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.left-spacer { width: 40px; }
+
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .trending-header h1 {
   font-size: 2.2rem;
   margin: 0 0 0.5rem 0;
@@ -19,6 +34,34 @@
 .trending-header p {
   font-size: 1.1rem;
   opacity: 0.8;
+}
+
+/* Search */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+
+.search-bar input {
+  width: min(720px, 100%);
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.search-bar input:focus {
+  border-color: rgba(99, 102, 241, 0.9); /* indigo-500 */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Filters */
@@ -58,6 +101,20 @@
   transition: transform 0.3s ease;
 }
 
+/* Image preview */
+.news-image {
+  width: 100%;
+  background: #0f0f0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.news-image img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
 .news-card:hover {
   transform: translateY(-5px);
 }
@@ -74,6 +131,7 @@
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .reliability-score.low {
@@ -143,4 +201,123 @@
 
 .report-btn:hover {
   color: #ef4444;
+}
+
+/* Auth/login UI */
+.auth-row {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.auth-status {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-actions .delete-btn {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ffb4b4;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Modal styles (shared look with Chat modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1e1e1e;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 420px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal h2 {
+  margin: 0 0 1rem 0;
+  color: #ef4444;
+}
+
+.modal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-fields label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.modal-fields input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.cancel-btn, .publish-btn {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.publish-btn {
+  background: #ef4444;
+  color: white;
 }
