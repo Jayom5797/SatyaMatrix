@@ -30,7 +30,7 @@ Frontend (`main/frontend/.env`):
 ```
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-# Optional, defaults to http://localhost:5050
+
 VITE_API_BASE=http://localhost:5050
 ```
 
@@ -38,11 +38,11 @@ Backend (`main/backend/.env`):
 ```
 SUPABASE_URL=your_supabase_url
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key   # keep private
-# Optional: list of admin emails (comma-separated)
+
 ADMIN_EMAILS=admin1@example.com,admin2@example.com
-# Optional: storage bucket name (defaults to reports-media)
+
 STORAGE_BUCKET=reports-media
-# Optional: server port (defaults to 5050)
+
 PORT=5050
 ```
 
