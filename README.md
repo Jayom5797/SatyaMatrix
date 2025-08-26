@@ -111,5 +111,4 @@ After updating, log out/in to refresh the JWT.
 - 403 on delete: ensure user is admin (via SQL or `ADMIN_EMAILS`) and JWT refreshed.
 - Image not deleting: confirm `reports.image_url` is a public URL (created by `/upload-image`).
 
-## License
-MIT (update if needed).
+
