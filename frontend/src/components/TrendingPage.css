@@ -1,0 +1,146 @@
+/* Trending Page Layout */
+.trending-page-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.trending-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.trending-header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.trending-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* News Grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background: #1e1e1e;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.reliability-badge {
+  margin-bottom: 1rem;
+}
+
+.reliability-score {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.reliability-score.low {
+  background: rgba(239, 68, 68, 0.9);
+}
+
+.news-title {
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+}
+
+.news-description {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.reasons-section {
+  margin-bottom: 1rem;
+}
+
+.reasons-section ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0 0;
+  opacity: 0.7;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.news-meta, .news-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item, .vote-btn, .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vote-btn, .action-btn {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.vote-btn:hover, .action-btn:hover {
+  color: white;
+}
+
+.report-btn:hover {
+  color: #ef4444;
+}
